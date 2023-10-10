@@ -579,7 +579,7 @@ export async function cutEncodeSmartPart({ filePath, cutFrom, cutTo, outPath, ou
 
     const args = [
       `-c:${outputIndex}`, videoCodec,
-      `-b:${outputIndex}`, videoBitrate,
+      `-qp`, `0`,
     ];
 
     // seems like ffmpeg handles this itself well when encoding same source file
